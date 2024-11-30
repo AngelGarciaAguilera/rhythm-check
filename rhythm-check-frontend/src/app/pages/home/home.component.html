@@ -1,0 +1,14 @@
+<main [ngClass]="'home ' + (userID ? 'logged' : 'welcome')">
+  <h1 class="title">RhythmCheck</h1>
+  <div class="slogan-wrapper">
+    <h2 class="slogan">Check the rhythm of your life.</h2>
+    <i class="music-icon fa-solid fa-music fa-beat"></i>
+  </div>
+  <div class="link-container">
+    <app-generic-anchor
+      label="Log in"
+      url="/log-in"
+      [isInternal]="true"
+    />
+  </div>
+</main>

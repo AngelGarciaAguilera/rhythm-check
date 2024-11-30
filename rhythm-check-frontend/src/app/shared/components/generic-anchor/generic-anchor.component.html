@@ -1,0 +1,25 @@
+<a
+  *ngIf="isInternal; else externalLink"
+  [routerLink]="url"
+  [target]="target"
+  [ngClass]="className"
+  class="link">
+  <ng-container *ngIf="icon">
+    <i [class]="icon"></i>
+  </ng-container>
+  <span>{{ label }}</span>
+</a>
+
+<ng-template #externalLink>
+  <a
+    [href]="url"
+    [target]="target"
+    [rel]="target === '_blank' ? 'noopener noreferrer' : ''"
+    [ngClass]="className"
+    class="link">
+    <ng-container *ngIf="icon">
+      <i [class]="icon"></i>
+    </ng-container>
+    <span>{{ label }}</span>
+  </a>
+</ng-template>

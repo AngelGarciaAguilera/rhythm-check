@@ -1,0 +1,10 @@
+<button
+  [type]="type"
+  [disabled]="disabled"
+  (click)="onClick()"
+  class="btn">
+  <ng-container *ngIf="icon">
+    <i [class]="icon"></i>
+  </ng-container>
+  <span>{{ label }}</span>
+</button>

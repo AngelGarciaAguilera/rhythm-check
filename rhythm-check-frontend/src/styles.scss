@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/font-faces.scss";
+@import "assets/styles/animations.scss";
+@import "assets/styles/mixins.scss";
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+$primary-color: #1ED760;
+$secondary-color: #509BF5;
+$special-color: #D63692;
+$alternative-color: #9547DE;
+$black: #191414;
+
+/* Styles reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* General styles */
+html {
+  color: $black;
+}
+
+body {
+  color: inherit;
+}
+
+* {
+  font-family: 'Gotham', sans-serif;
+}
+
+small {
+  font-weight: 100;
+}
+
+/* Custom styles */
+body:has(.home.welcome, .page-not-found) {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 20% 20%, $primary-color, transparent),
+              radial-gradient(circle at 80% 30%, $black, transparent),
+              radial-gradient(circle at 40% 80%, $secondary-color, transparent),
+              radial-gradient(circle at 70% 90%, $special-color, transparent),
+              radial-gradient(circle at 30% 50%, $primary-color, transparent);
+  background-size: 150% 150%;
+  animation: animateBackground 8s infinite alternate;
+}

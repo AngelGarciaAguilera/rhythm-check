@@ -1,0 +1,48 @@
+@import '../../../../styles.scss';
+
+.link {
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 24px;
+  border: none;
+  border-radius: 15px;
+  background-color: $primary-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: scale(0.8);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  &, * {
+    color: white;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
+
+
+
+
+.back-btn {
+
+
+  &, * {
+    color: white;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+
+    &, * {
+      color: white;
+    }
+  }
+}

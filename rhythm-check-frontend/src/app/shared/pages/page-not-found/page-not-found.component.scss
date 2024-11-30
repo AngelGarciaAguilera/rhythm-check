@@ -1,0 +1,12 @@
+.page-not-found {
+  text-align: center;
+
+  .error {
+    font-size: clamp(64px, 7.5vw, 128px);
+    line-height: normal;
+  }
+
+  .text-info {
+    margin: 15px 0;
+  }
+}

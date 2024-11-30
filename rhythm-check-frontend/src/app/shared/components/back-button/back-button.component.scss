@@ -1,0 +1,22 @@
+@import '../../../../styles.scss';
+
+.back-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  background-color: $alternative-color;
+  box-shadow: 1px 1px 25px $primary-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: scale(0.8);
+  @include shadow-breathe(1px, 1px, 25px, $primary-color);
+
+  &, * {
+    color: white;
+  }
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}

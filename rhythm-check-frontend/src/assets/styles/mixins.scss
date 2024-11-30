@@ -1,0 +1,59 @@
+@mixin typing($duration, $steps, $cursor-color: black) {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid $cursor-color;
+  width: 0;
+  max-width: fit-content;
+  animation: typing $duration steps($steps, end) both, blink 0.5s infinite;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: $cursor-color;
+    }
+  }
+}
+
+@mixin fade-in-right($duration) {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: fade $duration both;
+
+  @keyframes fade {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+
+    }
+  }
+}
+
+@mixin shadow-breathe($x, $y, $blur, $color, $spread: 0) {
+  @keyframes breathe {
+    0% {
+      box-shadow: $x $y ($blur * 0.5) $spread $color;
+    }
+    50% {
+      box-shadow: $x $y ($blur * 1.5) ($spread * 1.5) $color;
+    }
+    100% {
+      box-shadow: $x $y ($blur * 0.5) $spread $color;
+    }
+  }
+
+  animation: breathe 4s infinite ease-in-out;
+}
