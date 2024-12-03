@@ -1,20 +1,23 @@
+@import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/mixins.scss';
+
 .btn {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
+  background-color: $alternative-color;
+  box-shadow: 1px 1px 25px $primary-color;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
   transition: background-color 0.3s ease;
+  transform: scale(0.8);
+  @include shadow-breathe(1px, 1px, 25px, $primary-color);
 
-  &:hover:not(:disabled) {
-    background-color: #5c9aff;
+  &, * {
+    color: white;
   }
 
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+  &:hover {
+    background-color: $secondary-color;
   }
 }

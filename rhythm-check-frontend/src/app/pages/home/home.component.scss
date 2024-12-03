@@ -1,4 +1,6 @@
-@import '../../../styles.scss';
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixins.scss';
+
 
 .title {
   font-size: clamp(32px, 7.5vw, 128px);
